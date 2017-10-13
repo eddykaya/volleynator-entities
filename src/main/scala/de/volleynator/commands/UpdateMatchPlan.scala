@@ -1,5 +1,5 @@
 package de.volleynator.commands
 
-import at.volleynator.entities.Match
+import de.volleynator.entities.Match
 
 case class UpdateMatchPlan(matches: Set[Match])
