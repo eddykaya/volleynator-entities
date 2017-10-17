@@ -1,7 +1,5 @@
 package de.volleynator.entities
 
-import de.volleynator.entities.Match
-
 import scala.collection.mutable.ListBuffer
 
 case class MatchPlan(matches: Set[Match]) {
@@ -11,7 +9,7 @@ case class MatchPlan(matches: Set[Match]) {
 
     mergedMatches ++= matchPlan.matches
 
-    mergedMatches ++= matches.filter(m => !mergedMatches.map(_.matchNumber).contains(m.matchNumber))
+    mergedMatches ++= matches.filter(m => !mergedMatches.map(_.matchId).contains(m.matchId))
 
     MatchPlan(mergedMatches.toSet)
   }

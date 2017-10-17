@@ -1,6 +1,6 @@
 name := "volleynator-entities"
 
-version := "0.0.6-SNAPSHOT"
+version := "0.1.0-SNAPSHOT"
 
 organization := "com.github.eddykaya"
 
@@ -11,6 +11,10 @@ publishMavenStyle := true
 pomIncludeRepository := { _ => false }
 
 isSnapshot := version.value endsWith "SNAPSHOT"
+
+
+libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.1"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"
 
 
 credentials += Credentials("Sonatype Nexus Repository Manager",
