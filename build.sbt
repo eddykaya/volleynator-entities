@@ -1,6 +1,6 @@
 name := "volleynator-entities"
 
-version := "0.1.0-SNAPSHOT"
+version := "0.2.0-SNAPSHOT"
 
 organization := "com.github.eddykaya"
 
@@ -15,7 +15,7 @@ isSnapshot := version.value endsWith "SNAPSHOT"
 
 libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.1"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.1" % "test"
-
+libraryDependencies += "com.typesafe.akka" %% "akka-persistence" % "2.5.6"
 
 credentials += Credentials("Sonatype Nexus Repository Manager",
                            "oss.sonatype.org",
