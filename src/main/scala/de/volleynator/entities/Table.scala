@@ -2,4 +2,4 @@ package de.volleynator.entities
 
 import java.time.{LocalDateTime, ZoneId}
 
-case class Table(entries: Seq[TableEntry], dateTime: LocalDateTime = LocalDateTime.now(ZoneId.of("UTC")))
+case class Table(tableEntries: Seq[TableEntry], dateTime: LocalDateTime = LocalDateTime.now(ZoneId.of("UTC")))
