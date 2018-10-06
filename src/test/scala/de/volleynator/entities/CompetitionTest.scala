@@ -2,7 +2,7 @@ package de.volleynator.entities
 
 import java.time.LocalDateTime
 
-import de.volleynator.events.{CompetitionCreated, CompetitionType}
+import de.volleynator.events.{CompetitionCreated, CompetitionEvent, CompetitionType}
 import org.scalatest.{FlatSpecLike, Matchers}
 
 class CompetitionTest extends FlatSpecLike with Matchers {
@@ -27,5 +27,11 @@ class CompetitionTest extends FlatSpecLike with Matchers {
     val mergedCompetition = competition + competitionCreated
 
     mergedCompetition.season shouldBe "2018/2019"
+  }
+
+  it should "return itself for unknown event" in {
+    val mergedCompetition = competition + new CompetitionEvent {}
+
+    mergedCompetition shouldBe competition
   }
 }
