@@ -9,13 +9,4 @@ case class CompetitionUpdated(name: String, season: String, competitionType: Com
   def tagged: Tagged = {
     Tagged(this, Set(association,"Competition", "CompetitionCreated"))
   }
-
-  def +(other: CompetitionCreated):CompetitionUpdated = {
-    CompetitionUpdated(other.name, other.season, other.competitionType, other.association, other.updatedAt)
-  }
-
-  def +(other: CompetitionUpdated):CompetitionUpdated = {
-    CompetitionUpdated(other.name, other.season, other.competitionType, other.association, other.updatedAt)
-  }
-
 }
