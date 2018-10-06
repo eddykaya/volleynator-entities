@@ -2,4 +2,10 @@ package de.volleynator.events
 
 import java.time.LocalDateTime
 
-case class CompetitionUpdated(updatedAt: LocalDateTime)
+import akka.persistence.journal.Tagged
+
+case class CompetitionUpdated(name: String, season: String, competitionType: CompetitionType, association: String, updatedAt: LocalDateTime) {
+  def tagged: Tagged = {
+    return Tagged(this, Set(association,"Competition", "CompetitionCreated"))
+  }
+}
