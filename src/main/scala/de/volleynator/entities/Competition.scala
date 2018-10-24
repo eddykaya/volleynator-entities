@@ -12,7 +12,7 @@ case class Competition(
                         matchPlanUrl: String,
                         leagueName: String,
                         competitionType: CompetitionType
-                      )(updatedAt: LocalDateTime) {
+                      )(val updatedAt: LocalDateTime) {
 
   def +(competitionEvent: CompetitionEvent) = {
     competitionEvent match {
