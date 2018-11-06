@@ -8,7 +8,7 @@ import org.scalatest.{FlatSpecLike, Matchers}
 class CompetitionTest extends FlatSpecLike with Matchers {
 
   val competitionCreated = CompetitionCreated(id = "1", name = "CompetitionName", season = "2018/2019", CompetitionType("", ""), "", LocalDateTime.MIN)
-  val competition = Competition("", "", true, "", "", "", new CompetitionType("",""))(LocalDateTime.MAX)
+  val competition = Competition("","", "", true, "", "", "", new CompetitionType("",""))(LocalDateTime.MAX)
 
 
   "A Competition" should "merge updatedAt" in {
@@ -36,8 +36,8 @@ class CompetitionTest extends FlatSpecLike with Matchers {
   }
 
   it should "ignore updated at on equality check" in {
-    val competition1 = Competition("", "", true, "", "", "", new CompetitionType("",""))(LocalDateTime.MAX)
-    val competition2 = Competition("", "", true, "", "", "", new CompetitionType("",""))(LocalDateTime.MIN)
+    val competition1 = Competition("","", "", true, "", "", "", new CompetitionType("",""))(LocalDateTime.MAX)
+    val competition2 = Competition("","", "", true, "", "", "", new CompetitionType("",""))(LocalDateTime.MIN)
 
     competition1 shouldBe competition2
   }
