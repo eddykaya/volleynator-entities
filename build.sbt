@@ -1,6 +1,6 @@
 name := "volleynator-entities"
 
-version := "0.5.7-SNAPSHOT"
+version := "0.6.0-SNAPSHOT"
 
 organization := "com.github.eddykaya"
 

@@ -7,7 +7,7 @@ import org.scalatest.{FlatSpecLike, Matchers}
 
 class CompetitionTest extends FlatSpecLike with Matchers {
 
-  val competitionCreated = CompetitionCreated(name = "CompetitionName", season = "2018/2019", CompetitionType("", ""), "", LocalDateTime.MIN)
+  val competitionCreated = CompetitionCreated(id = "1", name = "CompetitionName", season = "2018/2019", CompetitionType("", ""), "", LocalDateTime.MIN)
   val competition = Competition("", "", true, "", "", "", new CompetitionType("",""))(LocalDateTime.MAX)
 
 
